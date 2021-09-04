@@ -1,13 +1,13 @@
 {
   "name": "auto-update-test-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-builder build --mac --publish never",
-    "deploy": "electron-builder build --mac --publish always"
+    "build": "CSC_LINK=./Certificates.p12 electron-builder build --mac --publish never -c electron-builder-dmg.yml",
+    "deploy": "CSC_LINK=./Certificates.p12 electron-builder build --mac --publish always -c electron-builder-dmg.yml"
   },
   "author": "",
   "license": "ISC",
