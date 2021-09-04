@@ -1,0 +1,4 @@
+appId: com.test.autoupdate
+publish:
+  provider: github
+  token: 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
