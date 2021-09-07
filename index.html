@@ -4,21 +4,30 @@
   <style>
     body {
       box-sizing: border-box;
-      margin: 0;
-      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: sans-serif;
-      background-color: #eaeaea;
+      background-color: #ececec;
       text-align: center;
+      flex-direction: column;
+    }
+    .headerText {
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .updateText {
+      color: blue;
     }
     #notification {
       position: fixed;
-      bottom: 20px;
-      left: 20px;
-      width: 200px;
+      bottom: 40px;
+      left: 40px;
+      width: 250px;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 4px;
       background-color: white;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 8px 0 lightgrey;
     }
     .hidden {
       display: none;
@@ -26,8 +35,9 @@
   </style>
 </head>
 <body>
-  <h1>Auto Update Test App</h1>
-  <p id="version"></p>
+  <div class="headerText">Auto Update Test App</div>
+  <div id="version"></div>
+  <div class="updateText">new in this version: its tuesday</div>
   <div id="notification" class="hidden">
     <p id="message"></p>
     <button id="close-button" onClick="closeNotification()">
