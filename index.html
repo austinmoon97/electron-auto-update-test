@@ -17,7 +17,7 @@
       font-weight: 600;
     }
     .updateText {
-      color: blue;
+      color: red;
     }
     #notification {
       position: fixed;
@@ -62,6 +62,7 @@
     const restartButton = document.getElementById('restart-button');
     ipcRenderer.on('update_available', () => {
       ipcRenderer.removeAllListeners('update_available');
+      console.log("update available")
       message.innerText = 'A new update is available. Downloading now...';
       notification.classList.remove('hidden');
     });
